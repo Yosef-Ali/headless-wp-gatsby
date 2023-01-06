@@ -11,7 +11,9 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "https://ethiocatholicaddis.org/wordpress_o/graphql",
+        url:
+          process.env.WPGRAPHQL_URL ||
+          "https://ethiocatholicaddis.org/wordpress_o/graphql",
         schema: {
           timeout: 80000,
         },
