@@ -3,7 +3,7 @@ module.exports = {
     defaultTitle: `Gatsby and WordPress Demo Starter`,
     defaultDescription: `Demo starter for combining Gatsby and WordPress. Created for the LinkedIn Learning course "Building a Headless WordPress Site with Gatsby" and based on Gatsby Default Starter by @gatsbyjs`,
     author: `@mor10`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://ethiocatholicaddis.org`,
     logo: `/logo.png`,
     twitter: `@mor10`,
   },
@@ -11,10 +11,14 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "http://mywpsite.local/graphql",
+        url: "https://ethiocatholicaddis.org/wordpress_o/graphql",
+        schema: {
+          timeout: 80000,
+        },
       },
     },
     "gatsby-plugin-postcss",
+
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
